@@ -1,0 +1,389 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+ .navbar {
+   background: #ccc;
+ }
+
+ body {
+   background-image: url("./img/bgimg.png");
+   /* background-color:floralwhite; */
+ }
+ button{
+    padding: 8px 25px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: #cc0000;
+}
+
+ /* login page */
+ .login-container {
+   display: flex;
+   background: #ccc;
+   padding: 40px 30px;
+   border-radius: 10px;
+   margin-top: 110px;
+   margin-left: 36%;
+   /* box-shadow: 0px 10px 25px rgba(0,0,0,0.1); */
+   width: 350px;
+ }
+
+
+ .login-form h2 {
+   text-align: center;
+   margin-bottom: 25px;
+   color: #333;
+ }
+
+ .form-group {
+   margin-bottom: 20px;
+ }
+
+ .form-group label {
+   display: block;
+   margin-bottom: 5px;
+   color: #555;
+ }
+
+ .form-group input {
+   width: 100%;
+   padding: 12px 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   transition: 0.3s;
+ }
+
+ .input-group {
+   margin-bottom: 20px;
+ }
+
+ .input-group label {
+   display: block;
+   margin-bottom: 5px;
+   color: #555;
+ }
+
+ .input-group input {
+   width: 100%;
+   padding: 12px 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   transition: 0.3s;
+ }
+
+ .form-group input:focus {
+   border-color: #007bff;
+   outline: none;
+ }
+  
+ .input-group input:focus {
+   border-color: #007bff;
+   outline: none;
+ }
+
+ .button1 {
+   width: 100%;
+   padding: 12px;
+   background: sandybrown;
+   border: none;
+   color: black;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+   margin-top: 10px;
+ }
+
+ .button1:hover {
+   background: rgb(240, 141, 54);
+    color: white;
+ }
+
+ .signup-link {
+   text-align: center;
+   margin-top: 15px;
+   color: #555;
+ }
+
+ .signup-link a {
+   color: red;
+   text-decoration: none;
+ }
+
+ .signup-link a:hover {
+   text-decoration: underline;
+ }
+
+
+ /* register page */
+
+ .login-container1 {
+   display: flex;
+   background: #ccc;
+   padding: 40px 30px;
+   border-radius: 10px;
+   margin-top: 45px;
+   margin-left: 33%;
+   /* box-shadow: 0px 10px 25px rgba(0,0,0,0.1); */
+   width: 450px;
+ }
+
+
+ .login-form1 h2 {
+   text-align: center;
+   margin-bottom: 25px;
+   color: #333;
+   margin-left: 100px;
+ }
+
+
+ .input-group1 {
+   margin-bottom: 20px;
+ }
+
+ .input-group1 label {
+   display: block;
+   margin-bottom: 5px;
+   color: #555;
+ }
+
+ .input-group1 input {
+   width: 130%;
+   padding: 12px 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   transition: 0.3s;
+ }
+
+ .input-group1 input:focus {
+   border-color: #007bff;
+   outline: none;
+ }
+
+ .button2 {
+   width: 130%;
+   padding: 12px;
+   background: sandybrown;
+   border: none;
+   color: black;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+   margin-top: 10px;
+ }
+
+ .button2:hover {
+   background: rgb(240, 141, 54);
+    color: white;
+ }
+
+
+ /* home page */
+
+
+ header {
+   background-color: transparent;
+   /* background-color: #ccc; */
+   color: white;
+   padding: 15px;
+   margin-top: 20px;
+   text-align: center;
+ }
+
+ .home {
+   text-align: center;
+   padding: 50px;
+ }
+
+ .button3 {
+   width: 20%;
+   padding: 10px 20px;
+   margin: 20px;
+   font-size: 16px;
+   background: sandybrown;
+   color: black;
+   border: none;
+   border-radius: 5px;
+ }
+
+ .button3:hover {
+   background: rgb(240, 141, 54);
+   color: white;
+ }
+
+
+
+.cards{
+  display: flex;
+  margin-top: 80px;
+  /* object-fit: cover; */
+  justify-content: space-evenly;
+  padding: 18px;
+  text-align: center;
+  /* background-color: #007bff; */
+}
+
+.cards .card1,
+.cards .card2,
+.cards .card3,
+.cards .card4{
+  width: 270px;
+  height: 240px;
+  margin-top: -20px;
+  object-fit: cover;
+  padding: 20px;
+  border-radius: 10px;
+  /* background-color: lightcyan; */
+  /* background-color: transparent; */
+  background-color: #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.cards .card1 img,
+.cards .card2 img,
+.cards .card3 img,
+.cards .card4 img{
+  width: 230px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cards .card1 img:hover,
+.cards .card2 img:hover,
+.cards .card3 img:hover,
+.cards .card4 img:hover{
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+} 
+
+/* contact */
+
+.cont{
+    width: 350px;
+    margin: 220px auto;
+    padding: 30px;
+    background-color:#ccc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+}
+
+.cont h1{
+    color: #333;
+    margin-bottom: 20px;
+    /* font-size: 25; */
+}
+
+.cont p{
+    font-size: 21px;
+    
+    color: #555;
+    margin: 10px 0;
+}
+
+/* user page */
+
+/* Page title */
+h1{
+    text-align: center;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Table style */
+table{
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Header style */
+th{
+    background-color: #333;
+    color: white;
+    padding: 12px;
+}
+
+/* Table cells */
+td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row hover effect */
+tr:hover{
+    background-color: #f5f5f5;
+}
+
+/* Input fields while editing */
+input{
+    padding: 5px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Common button style */
+button{
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 2px;
+}
+
+/* Edit button */
+.edit-btn{
+    background-color: #3498db;
+}
+
+.edit-btn:hover{
+    background-color: #217dbb;
+}
+
+/* Delete button */
+.delete-btn{
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover{
+    background-color: #c0392b;
+}
+
+/* Save button */
+.save-btn{
+    background-color: #2ecc71;
+}
+
+.save-btn:hover{
+    background-color: #27ae60;
+}
+
+/* Cancel button */
+.cancel-btn{
+    background-color: #f39c12;
+}
+
+.cancel-btn:hover{
+    background-color: #d68910;
+}
