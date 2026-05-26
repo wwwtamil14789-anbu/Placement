@@ -6,7 +6,7 @@ const User = () => {
   const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState({});
 
-  // ✅ Temporary Admin (IMPORTANT)
+  // Temporary Admin 
   const loginUser = { role: "admin" };
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const User = () => {
     setUsers(res.data);
   };
 
-  // ✅ Delete
+  // Delete
   const deleteUser = async (id) => {
     if (!window.confirm("Delete this user?")) return;
 
@@ -26,25 +26,25 @@ const User = () => {
     fetchUsers();
   };
 
-  // ✅ Start Edit
+  //  Start Edit
   const startEdit = (user) => {
     setEditingId(user.id);
     setEditData({ ...user });
   };
 
-  // ✅ Handle Input
+  //  Handle Input
   const handleChange = (e) => {
     setEditData({ ...editData, [e.target.name]: e.target.value });
   };
 
-  // ✅ Save
+  //  Save
   const saveEdit = async (id) => {
     await axios.put(`http://localhost:3001/users/${id}`, editData);
     setEditingId(null);
     fetchUsers();
   };
 
-  // ✅ Cancel
+  //  Cancel
   const cancelEdit = () => {
     setEditingId(null);
     setEditData({});

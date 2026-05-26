@@ -23,9 +23,6 @@ const NavigationBar = () => {
                     <LinkContainer to="/contact">
                     <Nav.Link className="me-3">Contact</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/blogs">
-                    <Nav.Link className="me-3">Blogs</Nav.Link>
-                    </LinkContainer>
                  
                     <LinkContainer to="/users">
                     <Nav.Link className="me-3">Users</Nav.Link>

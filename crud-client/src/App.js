@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import Blogs from "./Blogs";
 import Home from "./Home";
 import Contact from "./Contact";
 import Login from "./Login";
@@ -25,7 +24,6 @@ function Layout() {
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Blogs" element={<Blogs />} />
           <Route path="/" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/User" element={<User />} />

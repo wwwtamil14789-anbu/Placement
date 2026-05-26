@@ -77,47 +77,49 @@ app.get("/users", (req, res) => {
 
 // ================= UPDATE USER =================
 app.put("/users/:id", (req, res) => {
-
     const { id } = req.params;
     const { username, email, password, phone_number } = req.body;
 
+    console.log(id, req.body); // debug
+
     const sql = `
-    UPDATE users 
-    SET Username=?, Email=?, Password=?, Phone_number=? 
-    WHERE Id=?`;
+    UPDATE client 
+    SET username=?, email=?, password=?, phone_number=? 
+    WHERE id=?`;
 
     db.query(sql, [username, email, password, phone_number, id], (err, result) => {
-
         if (err) {
-            console.log(err);
-            return res.status(500).json({ message: "Error updating user" });
+            console.error(err);
+            return res.status(500).json({ message: "Error updating user", error: err });
         }
-        else{
-        res.json({ message: "User updated successfully" });
-        }
-    });
 
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json({ message: "User updated successfully" });
+    });
 });
 
 
 // ================= DELETE USER =================
 app.delete("/users/:id", (req, res) => {
-
     const { id } = req.params;
 
-    const sql = "DELETE FROM details WHERE Id=?";
+    const sql = "DELETE FROM client WHERE id=?";
 
     db.query(sql, [id], (err, result) => {
-
         if (err) {
-            console.log(err);
-            return res.status(500).json({ message: "Error deleting user" });
+            console.error(err);
+            return res.status(500).json({ message: "Error deleting user", error: err });
         }
-        else{
-        res.json({ message: "User deleted successfully" });
-        }
-    });
 
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json({ message: "User deleted successfully" });
+    });
 });
 
 
